@@ -1,6 +1,5 @@
 import React from "react";
 import { ErrorMessage, Field, useField } from "formik";
-import "./style.css";
 const DynamicCheckBox = (props) => {
   const [field, meta] = useField(props);
   const { label, name } = props;
