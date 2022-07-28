@@ -39,7 +39,9 @@ const DynamicForm = ({ formData }) => {
           <div
             className="container-fluid p-3 mt-1"
             style={{
-              background: formData?.card?.background ?? "#e8e8e8a3",
+              background: formData?.card?.background
+                ? formData?.card?.background
+                : "#e8e8e8a3",
               boxShadow: "",
             }}
           >

@@ -8,8 +8,8 @@ import DynamicSelect from "./DynamicSelect";
 const FormComponents = ({ field, fieldStyle, formik }) => {
   var cname = `col-md-${
     !!field?.fildSize?.md ? field?.fildSize?.md : "6"
-  } col-xs-${!!field?.fildSize?.xs ? field?.fildSize?.xs : "6"} col-sm-${
-    !!field?.fildSize?.sm ? field?.fildSize?.sm : "6"
+  } col-xs-${!!field?.fildSize?.xs ? field?.fildSize?.xs : "12"} col-sm-${
+    !!field?.fildSize?.sm ? field?.fildSize?.sm : "12"
   } col-lg-${!!field?.fildSize?.lg ? field?.fildSize?.lg : "6"}`;
 
   switch (field?.fieldType) {
@@ -91,12 +91,7 @@ const FormComponents = ({ field, fieldStyle, formik }) => {
         </div>
       );
   }
-  return (
-    <div>
-      FormComponents
-      <h3>{field?.placeholder}</h3>
-    </div>
-  );
+  return null;
 };
 
 export default FormComponents;
