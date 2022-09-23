@@ -1,7 +1,7 @@
 import { FieldTypes } from "../../utils/staticObjects";
 import * as Yup from "yup";
-
-export const signupFormJSON = {
+import { fieldSlugGenerator } from "../../utils/commonFunction";
+const formJSON = {
   ["form-slug"]: "signup-form-user",
   formName: "SignUp ",
   formPosition: "start",
@@ -106,7 +106,7 @@ export const signupFormJSON = {
         lg: "6",
       },
     },
-    
+
     {
       initValue: "",
       validateField: Yup.number().required("Salary is Requird"),
@@ -167,3 +167,4 @@ export const signupFormJSON = {
     },
   ],
 };
+export const signupFormJSON = fieldSlugGenerator(formJSON);
